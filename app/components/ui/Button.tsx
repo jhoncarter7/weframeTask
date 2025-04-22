@@ -5,7 +5,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>{
     variant: "primary"|"secondary"|"danger"
 }
 
-const baseStyles = 'px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2';
+const baseStyles = 'px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-offset-2 cursor-pointer';
 const variantStyles: Record<ButtonProps['variant'], string>   =  {
     primary: 'bg-primary hover:bg-primary text-white focus:ring-indigo-500',
     secondary: 'bg-gray-200 hover:bg-gray-300 text-gray-700 focus:ring-gray-500',

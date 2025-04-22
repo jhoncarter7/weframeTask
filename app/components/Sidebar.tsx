@@ -14,8 +14,8 @@ import {
 } from "lucide-react";
 const navItems = [
   { label: "Dashboard", href: "/dashboard", icon: <House size={20}/> },
-  { label: "Content", href: "/content/stories", icon: <FileText size={20}/> },
-  { label: "Users", href: "/content/users", icon: <SquareUserRound size={20}/> },
+  { label: "Content", href: "/stories", icon: <FileText size={20}/> },
+  { label: "Users", href: "/users", icon: <SquareUserRound size={20}/> },
   { label: "Tasks", href: "/tasks", icon: <UsersRound size={20}/> },
   { label: "Settings", href: "/settings", icon: <Settings size={20}/> },
 ];
@@ -23,7 +23,7 @@ const navItems = [
 export default function Sidebar() {
   const pathname = usePathname();
   return (
-    <aside className="w-64 bg-white border-r h-screen sticky top-0 flex flex-col py-4 shadow-md font-urbanist">
+    <aside className=" bg-white border-r h-screen sticky top-0 flex flex-col py-4 shadow-md font-urbanist">
       <div className="p-4 text-xl font-bold"></div>
       <nav className="flex-1 px-6 space-y-1  justify-between">
         {navItems.map((item) => {

@@ -23,11 +23,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${urbanist.variable}  antialiased`}>
-        <main className="flex flex-col h-screen font-urbanist">
-          <Navbar />
+        <main className="grid grid-cols-10 grid-rows-5  h-screen font-urbanist pr-4">
+          <div className="col-span-2 row-span-5">
+            <Sidebar />
+          </div>
+          <div className="col-span-8 col-start-3">
+            <Navbar />
+          </div>
 
-          {children}
-          <Sidebar />
+          <div className="col-span-8 row-span-4 col-start-3 row-start-2">{children}</div>
         </main>
       </body>
     </html>
