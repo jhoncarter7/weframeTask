@@ -23,7 +23,7 @@ const navItems = [
 export default function Sidebar() {
   const pathname = usePathname();
   return (
-    <aside className=" bg-white border-r h-screen sticky top-0 flex flex-col py-4 shadow-md font-urbanist">
+    <aside className=" bg-white  h-screen sticky top-0 flex flex-col py-4 shadow-md font-urbanist">
       <div className="p-4 text-xl font-bold"></div>
       <nav className="flex-1 px-6 space-y-1  justify-between">
         {navItems.map((item) => {
