@@ -23,7 +23,7 @@ const navItems = [
 export default function Sidebar() {
   const pathname = usePathname();
   return (
-    <aside className="w-64 bg-white border-r h-screen sticky top-0 flex flex-col py-4">
+    <aside className="w-64 bg-white border-r h-screen sticky top-0 flex flex-col py-4 shadow-md font-urbanist">
       <div className="p-4 text-xl font-bold"></div>
       <nav className="flex-1 px-6 space-y-1  justify-between">
         {navItems.map((item) => {
@@ -51,7 +51,7 @@ export default function Sidebar() {
       <div className="px-6">
       <div className="flex items-center space-x-2 px-4 py-2 bg-secondary text-gray-600 rounded-2xl cursor-pointer">
           <Headphones />
-          <span className="text-sm font-medium">Contact Support</span>
+          <span className="text-sm font-medium font-urbanist ">Contact Support</span>
         </div>
       </div>
     </aside>
