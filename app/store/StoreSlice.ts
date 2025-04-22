@@ -2,10 +2,12 @@ import { createSlice } from "@reduxjs/toolkit"
 
 interface initialIN{
     toggleMenu: boolean
+  
 }
 
 const initialState: initialIN = {
-    toggleMenu: false
+    toggleMenu: false,
+   
 }
 
 
@@ -16,13 +18,13 @@ export const storeSlice = createSlice({
         toggleMenu: (state) => {
             state.toggleMenu = !state.toggleMenu
         },
-        // closeMenu: (state) => {
-        //     state.toggleMenu = false
-        // }
+        closeMenu: (state) => {
+            state.toggleMenu = false
+        }
     }
 })
 
 
-export const { toggleMenu } = storeSlice.actions
+export const { toggleMenu, closeMenu } = storeSlice.actions
 
 export default storeSlice.reducer
