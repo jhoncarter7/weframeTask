@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 import {
-  
   FileText,
   Headphones,
   House,
@@ -13,17 +12,17 @@ import {
   UsersRound,
 } from "lucide-react";
 const navItems = [
-  { label: "Dashboard", href: "/dashboard", icon: <House size={20}/> },
-  { label: "Content", href: "/stories", icon: <FileText size={20}/> },
-  { label: "Users", href: "/users", icon: <SquareUserRound size={20}/> },
-  { label: "Tasks", href: "/tasks", icon: <UsersRound size={20}/> },
-  { label: "Settings", href: "/settings", icon: <Settings size={20}/> },
+  { label: "Dashboard", href: "/", icon: <House size={20} /> },
+  { label: "Content", href: "/stories", icon: <FileText size={20} /> },
+  { label: "Users", href: "/users", icon: <SquareUserRound size={20} /> },
+  { label: "Tasks", href: "/tasks", icon: <UsersRound size={20} /> },
+  { label: "Settings", href: "/settings", icon: <Settings size={20} /> },
 ];
 
 export default function Sidebar() {
   const pathname = usePathname();
   return (
-    <aside className=" bg-white  h-screen sticky top-0 flex flex-col py-4 shadow-md font-urbanist">
+    <aside className=" bg-white  h-screen sticky top-0 pt-18 flex flex-col py-4 shadow-md font-urbanist">
       <div className="p-4 text-xl font-bold"></div>
       <nav className="flex-1 px-6 space-y-1  justify-between">
         {navItems.map((item) => {
@@ -46,12 +45,13 @@ export default function Sidebar() {
             </Link>
           );
         })}
-        
       </nav>
       <div className="px-6">
-      <div className="flex items-center space-x-2 px-4 py-2 bg-secondary text-gray-600 rounded-2xl cursor-pointer">
+        <div className="flex items-center space-x-2 px-4 py-2 bg-secondary text-gray-600 rounded-2xl cursor-pointer">
           <Headphones />
-          <span className="text-sm font-medium font-urbanist ">Contact Support</span>
+          <span className="text-sm font-medium font-urbanist ">
+            Contact Support
+          </span>
         </div>
       </div>
     </aside>

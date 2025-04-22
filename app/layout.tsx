@@ -4,6 +4,8 @@ import "./globals.css";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 
+import { ReduxProvider } from "./store/ReduxProvider";
+
 const urbanist = Urbanist({
   variable: "--font-urbanist",
   subsets: ["latin"],
@@ -23,6 +25,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${urbanist.variable}  antialiased`}>
+        <ReduxProvider>
+          
         <main className="md:grid md:grid-cols-10 md:grid-rows-10  font-urbanist md:pr-4">
           <div className="hidden md:block col-span-2 row-span-10">
             <Sidebar />
@@ -33,6 +37,7 @@ export default function RootLayout({
 
           <div className="md:col-span-8 md:row-span-9 md:col-start-3 md:row-start-2 ">{children}</div>
         </main>
+        </ReduxProvider>
       </body>
     </html>
   );

@@ -1,5 +1,3 @@
-// src/components/ContentCard.tsx
-
 import React from "react";
 
 import { Eye, MoreHorizontal, Box } from "lucide-react";
