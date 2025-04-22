@@ -8,7 +8,7 @@ interface DummyProps extends ContentCardProps {
 export const StoriesData: DummyProps[] = [
   {
     id: 1,
-    imageUrl: "/images/cardimg1.png", // Use seeded random images
+    imageUrl: "/images/cardimg1.webp", // Use seeded random images
     title: "The Future of AI in Web Development Trends 2025",
     category: "Technology",
     date: "18 Apr 2025",
@@ -17,7 +17,7 @@ export const StoriesData: DummyProps[] = [
   },
   {
     id: 2,
-    imageUrl: "/images/cardimg2.png",
+    imageUrl: "/images/cardimg2.webp",
     title: "From Zero to Hero: Scaling Your Startup Effectively",
     category: "Business",
     date: "15 Apr 2025",
@@ -26,7 +26,7 @@ export const StoriesData: DummyProps[] = [
   },
   {
     id: 3,
-    imageUrl: "/images/cardimg3.png",
+    imageUrl: "/images/cardimg3.webp",
     title: "Building a Scalable Design System for Modern Apps",
     category: "Design",
     date: "10 Apr 2025",
@@ -35,7 +35,7 @@ export const StoriesData: DummyProps[] = [
   },
   {
     id: 4,
-    imageUrl: "/images/cardimg4.png",
+    imageUrl: "/images/cardimg4.webp",
     title: "Mastering Remote Collaboration: Tools and Techniques",
     category: "Productivity",
     date: "05 Apr 2025",
@@ -44,7 +44,7 @@ export const StoriesData: DummyProps[] = [
   },
   {
     id: 5,
-    imageUrl: "/images/cardimg5.png",
+    imageUrl: "/images/cardimg5.webp",
     title: "Exploring the Hidden Gems of Kyoto: A Travel Guide",
     category: "Travel",
     date: "28 Mar 2025",
@@ -54,7 +54,7 @@ export const StoriesData: DummyProps[] = [
   },
   {
     id: 6,
-    imageUrl: "/images/cardimg6.png",
+    imageUrl: "/images/cardimg6.webp",
     title: "Effective Content Strategy for B2B Marketing Success",
     category: "Marketing",
     date: "20 Mar 2025",
@@ -63,7 +63,7 @@ export const StoriesData: DummyProps[] = [
   },
   {
     id: 7,
-    imageUrl: "/images/cardimg1.png",
+    imageUrl: "/images/cardimg1.webp",
     title: "What's New in Next.js 15: Features and Updates",
     category: "Technology",
     date: "19 Apr 2025", // Very recent date
