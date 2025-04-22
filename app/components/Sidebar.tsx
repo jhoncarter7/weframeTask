@@ -46,14 +46,16 @@ export default function Sidebar() {
   }, [currentWidth, dispatch]);
 
  
+  // const shouldTranslate = currentWidth < 768;
+  // const translateXClass = shouldTranslate ? (toggle ? 'translate-x-0' : '-translate-x-full') : "";
 
   return (
-    <aside className={`bg-white  h-screen fixed inset-y-0 left-0 md:sticky md:inset-0 z-50 pt-18 flex flex-col py-4 shadow-md font-urbanist
+    <aside className={`bg-white  h-screen fixed inset-y-0 eft-0 md:sticky md:inset-0 z-50 pt-18 flex flex-col py-4 shadow-md font-urbanist
      transform transition-transform duration-300 ease-in-out
-        ${currentWidth < 768 ? toggle ? 'translate-x-0' : '-translate-x-full' : ""}`}
+        ${ toggle ? 'translate-x-0' : '-translate-x-full' } md:translate-x-1`}
         aria-hidden={!toggle && typeof window !== 'undefined' && currentWidth < 768}
         >
-      <div className="absolute top-0 right-0 p-4" onClick={()=> dispatch(closeMenu())}>{<X/>}</div>
+      <div className="absolute top-0 right-0 block md:hidden p-4" onClick={()=> dispatch(closeMenu())}>{<X/>}</div>
       <nav className="flex-1 px-6 space-y-1  justify-between">
         {navItems.map((item) => {
           const isActive = item.href === pathname;
