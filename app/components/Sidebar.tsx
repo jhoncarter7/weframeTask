@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FileText,
   Headphones,
@@ -28,11 +28,30 @@ export default function Sidebar() {
   const pathname = usePathname();
   const toggle = useSelector((state: RootState) => state.toggleMenu);
   const dispatch = useDispatch()
+  console.log(toggle, "toggle")
+  const currentWidth = typeof window !== 'undefined' ? window.innerWidth : 0;
+
+  console.log(currentWidth, "currentWidth")
+  useEffect(() => {
+    const handleResize = () => {
+      if (currentWidth < 768) {
+        dispatch(closeMenu());
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [currentWidth, dispatch]);
+
+ 
+
   return (
     <aside className={`bg-white  h-screen fixed inset-y-0 left-0 md:sticky md:inset-0 z-50 pt-18 flex flex-col py-4 shadow-md font-urbanist
      transform transition-transform duration-300 ease-in-out
-        ${toggle ? 'translate-x-0' : '-translate-x-full'}`}
-        aria-hidden={!toggle && typeof window !== 'undefined' && window.innerWidth < 768}
+        ${currentWidth < 768 ? toggle ? 'translate-x-0' : '-translate-x-full' : ""}`}
+        aria-hidden={!toggle && typeof window !== 'undefined' && currentWidth < 768}
         >
       <div className="absolute top-0 right-0 p-4" onClick={()=> dispatch(closeMenu())}>{<X/>}</div>
       <nav className="flex-1 px-6 space-y-1  justify-between">

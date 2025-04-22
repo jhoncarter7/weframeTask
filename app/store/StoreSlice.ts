@@ -19,7 +19,7 @@ export const storeSlice = createSlice({
             state.toggleMenu = !state.toggleMenu
         },
         closeMenu: (state) => {
-            state.toggleMenu = false
+            state.toggleMenu = !state.toggleMenu
         }
     }
 })
